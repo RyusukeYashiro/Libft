@@ -6,13 +6,12 @@
 /*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:09:06 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/23 14:35:30 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/26 02:57:14 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-//最後はnullを埋めて返す
 char	*ft_strdup(const char *s1)
 {
 	size_t	i;

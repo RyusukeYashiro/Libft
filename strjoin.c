@@ -6,11 +6,11 @@
 /*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:05:28 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/24 20:25:39 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/26 02:45:29 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_cat(char *hold, const char *string)
 {

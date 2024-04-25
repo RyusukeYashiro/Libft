@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
+/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 16:07:14 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/23 01:53:50 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/04/26 02:54:50 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 // #include <stdio.h>
 // #include <string.h>
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t njj)
 {

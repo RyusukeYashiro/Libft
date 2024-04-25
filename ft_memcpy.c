@@ -6,11 +6,12 @@
 /*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 16:56:00 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/23 11:47:49 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/26 03:01:38 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <libft.h>
-//汎用ポインタであるvoid型はデリファレンスができないため、一旦型を与えれてあげる必要がある
+
+#include "libft.h"
+
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*hold;

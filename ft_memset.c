@@ -6,11 +6,11 @@
 /*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 11:55:30 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/23 11:57:04 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/26 02:52:02 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

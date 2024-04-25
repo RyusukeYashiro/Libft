@@ -6,10 +6,9 @@
 /*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 02:06:18 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/23 02:08:23 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/26 02:57:14 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <libft.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

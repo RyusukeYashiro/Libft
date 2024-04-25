@@ -6,16 +6,13 @@
 /*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 11:46:19 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/23 11:46:49 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/26 03:01:25 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <libft.h>
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 127)
-		return (1);
-	return (0);
+	return (c >= 32 && c <= 127);
 }
-
-//スペースも含める

@@ -6,12 +6,11 @@
 /*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:33:59 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/24 18:39:13 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/26 03:51:14 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-#include <limits.h>
+#include "libft.h"
 
 void	ft_check(const char **string, int *sign)
 {

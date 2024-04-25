@@ -6,11 +6,11 @@
 /*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 03:14:09 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/23 03:15:01 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/26 02:50:43 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

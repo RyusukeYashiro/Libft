@@ -6,11 +6,11 @@
 /*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 13:05:58 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/23 14:01:25 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/26 02:53:11 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *buf1, const void *buf2, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 11:37:25 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/23 11:41:53 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/26 02:57:14 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
