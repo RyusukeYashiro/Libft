@@ -1,17 +1,28 @@
-#ifndef LIBFT_H
-#define LIBFT_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/26 16:55:08 by ryusukeyash       #+#    #+#             */
+/*   Updated: 2024/04/26 16:55:18 by ryusukeyash      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <limits.h>
-#include <stdint.h>
-#include <stdlib.h>
-#include <unistd.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <limits.h>
+# include <stdint.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-
 
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);

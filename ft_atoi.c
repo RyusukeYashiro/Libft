@@ -1,16 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:33:59 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 03:51:14 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/26 17:02:25 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_isspace(char c)
+{
+	return (c == ' ' || (c >= 9 && c <= 13));
+}
 
 void	ft_check(const char **string, int *sign)
 {
@@ -66,19 +71,19 @@ int	ft_atoi(const char *string)
 	}
 	return ((int)sign * ans);
 }
-/*
-int	main(int ac,char *av[])
-{
-	char	*ft_atoi_test;
-	char	*atoi_test;
 
-	if(ac > 1)
-	{
-		ft_atoi_test = av[1];
-		atoi_test = av[1];
-		printf("ft_atoi : %d\n" , ft_atoi(ft_atoi_test));
-		printf("atoi    : %d\n" , atoi(atoi_test));
-	}
-	return (0);
-}
-*/
+// #include <stdio.h>
+// int	main(int ac,char *av[])
+// {
+// 	char	*ft_atoi_test;
+// 	char	*atoi_test;
+
+// 	if(ac > 1)
+// 	{
+// 		ft_atoi_test = av[1];
+// 		atoi_test = av[1];
+// 		printf("ft_atoi : %d\n" , ft_atoi(ft_atoi_test));
+// 		printf("atoi    : %d\n" , atoi(atoi_test));
+// 	}
+// 	return (0);
+// }

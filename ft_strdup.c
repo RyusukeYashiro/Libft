@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strdup.c                                           :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:09:06 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 02:57:14 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/26 18:47:14 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,17 @@ char	*ft_strdup(const char *s1)
 	return (hold);
 }
 
-int	main(int argc, char *argv[])
-{
-	char	*p;
-	char	*str;
-	char	*tp;
+// #include <stdio.h>
+// int	main(int argc, char *argv[])
+// {
+// 	char	*p;
+// 	char	*str;
 
-	if (argc > 1)
-	{
-		str = argv[1];
-		p = ft_strdup(str);
-		tp = strdup(str);
-		printf("ft_strdup(p) = %s\n", p);
-		printf("strdup(str) = %s\n", tp);
-		free(p);
-	}
-}
+// 	if (argc > 1)
+// 	{
+// 		str = argv[1];
+// 		p = ft_strdup(str);
+// 		printf("ft_strdup(p) = %s\n", p);
+// 		free(p);
+// 	}
+// }
