@@ -3,36 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 16:07:14 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 02:54:50 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/27 23:24:33 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//関数 bzero は、与えられたメモリ領域をゼロバイト(\0)で消去することができます。
-//メモリ領域の開始アドレスとゼロにするバイト数を指定します。
-// memsetは任意の値でメモリを埋めることができるが、bzeroは０でメモリを埋める
-// #include <stddef.h>
-// #include <stdio.h>
-// #include <string.h>
 
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t njj)
 {
-	size_t	i;
-	char	*hold;
-
-	i = 0;
-	hold = (char *)s;
-	while (i < njj)
-	{
-		hold[i] = 0;
-		i++;
-	}
+	ft_memset(s, 0, njj);
 }
 
+// #include <stdio.h>
+// #include <string.h>
 // int	main(void)
 // {
 // 	char	buf[6] = "hello";
