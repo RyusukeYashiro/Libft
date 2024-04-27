@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   caloc.c                                            :+:      :+:    :+:   */
+/*   ft_caloc.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 12:50:27 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 02:54:38 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/27 23:48:24 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	totalsize;
 	void	*str;
 
-	if (count && (size > SIZE_MAX / count))
-		return (0);
-	if (size && (count > SIZE_MAX / size))
-		return (0);
+	if (count != 0 && (size > SIZE_MAX / count))
+		return (NULL);
+	if (size != 0 && (count > SIZE_MAX / size))
+		return (NULL);
 	totalsize = count * size;
 	str = malloc(totalsize);
 	if (!str)
