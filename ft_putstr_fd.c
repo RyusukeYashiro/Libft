@@ -6,7 +6,7 @@
 /*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 03:52:56 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 04:30:16 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/29 03:10:46 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,11 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+	if (!s)
+		return ;
+	while (*s)
+		write(fd, s++, 1);
 }
-
 // int	main(void)
 // {
 // 	char c[] = "jijiji";
