@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
+/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 11:55:30 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/27 23:20:03 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/04/28 22:06:15 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
