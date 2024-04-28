@@ -6,7 +6,7 @@
 /*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:33:59 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 17:02:25 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/04/27 23:29:46 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_check(const char **string, int *sign)
 	}
 }
 
-int	overflow_check(int sign, long tmp, long ans)
+int	overflow_check(int sign, long tmp, long hold)
 {
 	long	mx;
 	long	mn;
@@ -38,12 +38,12 @@ int	overflow_check(int sign, long tmp, long ans)
 	mn = LONG_MIN;
 	if (sign > 0)
 	{
-		if (mx / 10 < ans || ((mx / 10 == ans) && (mx % 10 < tmp)))
+		if (mx / 10 < hold || ((mx / 10 == hold) && (mx % 10 < tmp)))
 			return (1);
 	}
 	else
 	{
-		if (mn / -10 < ans || ((mn / -10 == ans) && (mn % -10 * -1 < tmp)))
+		if (mn / -10 < hold || ((mn / -10 == hold) && (mn % -10 * -1 < tmp)))
 			return (-1);
 	}
 	return (0);
@@ -53,23 +53,23 @@ int	ft_atoi(const char *string)
 {
 	int		sign;
 	long	tmp;
-	long	ans;
+	long	hold;
 
 	sign = 1;
 	tmp = 0;
-	ans = 0;
+	hold = 0;
 	ft_check(&string, &sign);
 	while (*string && ft_isdigit(*string))
 	{
 		tmp = *string - '0';
-		if (overflow_check(sign, tmp, ans) == 1)
+		if (overflow_check(sign, tmp, hold) == 1)
 			return ((int)LONG_MAX);
-		if (overflow_check(sign, tmp, ans) == -1)
+		if (overflow_check(sign, tmp, hold) == -1)
 			return ((int)LONG_MIN);
-		ans = ans * 10 + tmp;
+		hold = hold * 10 + tmp;
 		string++;
 	}
-	return ((int)sign * ans);
+	return ((int)sign * hold);
 }
 
 // #include <stdio.h>

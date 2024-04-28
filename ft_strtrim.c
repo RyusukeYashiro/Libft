@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:59:23 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 19:38:28 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/28 15:50:50 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 
-	if (*s1 || *set)
-		return (0);
-	if (!ft_strlen(s1))
-		return (0);
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	while (s1[start] && ft_strchr(set, s1[start]))
@@ -35,20 +33,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (hold);
 }
 
-/*
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main(void)
-{
-	char	*test;
-	char	*st;
-	char	*ans;
+// int	main(void)
+// {
+// 	char	*test;
+// 	char	*st;
+// 	char	*ans;
 
-	test = "1234aaaa22331122";
-	st = "1234";
-	ans = ft_strtrim(test,st);
-	if(ans != NULL){
-		printf("%s" , ans);
-	}
-}
-*/
+// 	test = "1234aaaa22331122";
+// 	st = "1234";
+// 	ans = ft_strtrim(test, st);
+// 	if (ans != NULL)
+// 	{
+// 		printf("%s", ans);
+// 	}
+// }

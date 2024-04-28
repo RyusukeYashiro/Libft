@@ -3,27 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:01:03 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 03:00:01 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/28 12:25:43 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /*memchr はヌル文字を文字列の終端として扱わず、単なるバイトの一つとみなす。
 バイナリデータを扱う上で、ヌル文字関係なく検索できる関数
 */
 void	*ft_memchr(const void *buf, int ch, size_t n)
 {
-	size_t		i;
-	const char	*hold;
+	size_t			i;
+	unsigned char	*hold;
 
-	hold = (char *)buf;
+	hold = (unsigned char *)buf;
 	i = 0;
 	while (i < n)
 	{
-		if (*hold == (char)ch)
+		if (*hold == (unsigned char)ch)
 		{
 			return ((void *)hold);
 		}

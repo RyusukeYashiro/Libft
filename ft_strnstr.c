@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 10:56:33 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 02:50:18 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/28 14:31:50 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,39 +18,34 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	if (*needle == '\0')
-	{
 		return ((char *)haystack);
-	}
 	i = 0;
-	while (haystack[i] != '\0' && i < len)
+	while (haystack[i] && i < len)
 	{
 		j = 0;
-		while (needle[j] != '\0' && haystack[i + j] == needle[j])
+		while (needle[j] && haystack[i + j] == needle[j])
 		{
 			if (i + j >= len)
 				break ;
 			j++;
 		}
 		if (needle[j] == '\0')
-		{
 			return ((char *)&haystack[i]);
-		}
 		i++;
 	}
 	return (NULL);
 }
-/*
-int	main(void) {
-	const char *haystack = "Hello, world!";
-	const char *needle = "world";
-	size_t len = 12;  // 検索範囲制限
 
-	const char *result = ft_strnstr(haystack, needle, len);
-	const char *test = strnstr(haystack,needle,len);
-	if (result) {
-		printf("Found: '%s'\n", result);
-		printf("Found: '%s'\n",test);
-	}
-	return (0);
-}
-*/
+// #include <stdio.h>
+// #include <string.h>
+// int	main(void) {
+// 	const char *haystack = "abbbcdefg";
+// 	const char *needle = "bbc";
+// 	size_t len = 20;
+
+// 	const char *test = ft_strnstr(haystack,needle,len);
+// 	if (test) {
+// 		printf("Found: '%s'\n",test);
+// 	}
+// 	return (0);
+// }

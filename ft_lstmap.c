@@ -6,7 +6,7 @@
 /*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 13:53:44 by ryusukeyash       #+#    #+#             */
-/*   Updated: 2024/04/27 15:02:18 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/04/28 15:44:18 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (!lst || !f || !del)
 		return (NULL);
-	new_list = 0;
+	new_list = NULL;
 	while (lst)
 	{
 		new_node = ft_lstnew((*f)(lst->content));

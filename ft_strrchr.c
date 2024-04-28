@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 11:37:25 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 02:57:14 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/28 14:41:35 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,15 @@ char	*ft_strrchr(const char *s, int c)
 {
 	const char	*hold;
 
-	hold = 0;
-	while (*s != '\0')
+	hold = NULL;
+	while (*s)
 	{
 		if (*s == c)
-		{
 			hold = s;
-		}
 		s++;
 	}
 	if (c == '\0')
-	{
 		return ((char *)s);
-	}
 	return ((char *)hold);
 }
 /*

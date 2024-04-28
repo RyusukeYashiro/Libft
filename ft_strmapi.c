@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 18:44:59 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 18:52:56 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/28 13:44:41 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	if (!s || !f)
-		return (0);
+		return (NULL);
 	hold = ft_strdup(s);
 	if (!hold)
-		return (0);
+		return (NULL);
 	while (hold[i])
 	{
 		hold[i] = (*f)(i, hold[i]);

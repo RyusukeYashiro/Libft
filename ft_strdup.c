@@ -6,7 +6,7 @@
 /*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:09:06 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 18:47:14 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/04/28 12:56:44 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 
 	i = 0;
 	hold = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if (hold == NULL)
+	if (!hold)
 		return (NULL);
 	while (s1[i])
 	{

@@ -6,7 +6,7 @@
 /*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 17:16:00 by ryusukeyash       #+#    #+#             */
-/*   Updated: 2024/04/27 17:16:45 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/04/28 13:21:24 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
-	dst_len = strlen(dst);
-	src_len = strlen(src);
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 	if (!dst || dstsize == 0)
 		return (dstsize + src_len);
 	if (dstsize <= dst_len)
-	{
 		return (dstsize + src_len);
-	}
 	while (dst_len + i < dstsize - 1 && src[i])
 	{
 		dst[dst_len + i] = src[i];
