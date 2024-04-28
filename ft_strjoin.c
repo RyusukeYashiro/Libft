@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strjoin.c                                          :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:05:28 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 02:45:29 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/28 21:42:18 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (s1 == NULL || s2 == NULL)
 		return (0);
-	len = strlen(s1) + strlen(s2);
+	len = ft_strlen(s1) + ft_strlen(s2);
 	hold = (char *)malloc(sizeof(char) * len + 1);
 	if (hold == NULL)
 		return (0);
 	ft_cat(hold, s1);
-	ft_cat(hold + strlen(s1), s2);
+	ft_cat(hold + ft_strlen(s1), s2);
 	hold[len] = '\0';
 	return (hold);
 }

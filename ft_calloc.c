@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_caloc.c                                         :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
+/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 12:50:27 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/27 23:48:24 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/04/28 21:41:21 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_calloc(size_t count, size_t size)
 	str = malloc(totalsize);
 	if (!str)
 		return (NULL);
-	memset(str, 0, totalsize);
+	ft_memset(str, 0, totalsize);
 	return (str);
 }
 /*

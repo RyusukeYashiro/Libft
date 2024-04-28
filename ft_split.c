@@ -6,7 +6,7 @@
 /*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 00:43:29 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 03:06:42 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/28 20:53:27 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,15 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-int	count_len(char const *s, char c)
+int	count_len(char const **s, char c)
 {
-	int	i;
 	int	len;
 
-	i = 0;
 	len = 0;
-	while (s[i] && !(s[i] == c))
+	while (**s != c)
 	{
+		(*s)++;
 		len++;
-		i++;
 	}
 	return (len);
 }
@@ -91,27 +89,25 @@ char	**ft_split(char const *s, char c)
 	{
 		while (*s && (*s == c))
 			s++;
-		hold[i] = ft_dup(s, count_len(s, c));
+		hold[i] = ft_dup(s, count_len(&s, c));
 		if (!hold[i])
 		{
 			ft_free(hold, i);
 			return (NULL);
 		}
 		i++;
-		s += count_len(s, c);
 	}
 	hold[count_word] = NULL;
 	return (hold);
 }
 
-// #include <stdio.h>
 // int	main(void)
 // {
 // 	char	*str;
 // 	char	charSet;
 // 	char	**split_Result;
 
-// 	str = "bbbbbbbbAAb     ffffbffdffffsbBBbbCC";
+// 	str = "AAbBBbCbddbe";
 // 	charSet = 'b';
 // 	split_Result = ft_split(str, charSet);
 // 	if (split_Result)

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   substr.c                                           :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 14:40:57 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 02:45:06 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/28 21:41:55 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	actual_len;
 
 	i = 0;
-	if (!s || start > strlen(s))
+	if (!s || start > ft_strlen(s))
 		return (0);
 	actual_len = ft_strlen(s + start);
 	if (actual_len > len)
