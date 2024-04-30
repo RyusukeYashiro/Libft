@@ -6,7 +6,7 @@
 /*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 17:16:00 by ryusukeyash       #+#    #+#             */
-/*   Updated: 2024/04/28 13:21:24 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/04/30 16:18:49 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,30 +18,33 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 	size_t	i;
 
-	i = 0;
-	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-	if (!dst || dstsize == 0)
+	if (!dst && !dstsize)
 		return (dstsize + src_len);
+	dst_len = ft_strlen(dst);
 	if (dstsize <= dst_len)
 		return (dstsize + src_len);
-	while (dst_len + i < dstsize - 1 && src[i])
+	i = dst_len;
+	while (i < dstsize - 1 && *src)
 	{
-		dst[dst_len + i] = src[i];
+		dst[i] = *src;
 		i++;
+		src++;
 	}
-	dst[dst_len + i] = '\0';
+	dst[i] = '\0';
 	return (dst_len + src_len);
 }
 
+// #include <stdio.h>
+// #include <string.h>
 // int	main(void)
 // {
-// 	char dst[256] = "";
-// 	const char *src = "42tokyo";
+// 	char dst[256] = "\0";
+// 	const char *src = "huhu";
 // 	size_t dstsize = 0;
 // 	size_t result;
 
-// 	result = ft_strlcat(dst, src, dstsize);
+// 	result = strlcat(dst, src, dstsize);
 // 	printf("After ft_strlcat: \"%s\", Length: %zu\n", dst, result);
 
 // 	// result = strlcat(dst, src, dstsize);
