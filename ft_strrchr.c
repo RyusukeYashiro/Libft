@@ -6,7 +6,7 @@
 /*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 11:37:25 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/30 17:29:06 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/05/01 11:05:36 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,17 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*hold;
-	int		len;
 
-	len = 0;
-	hold = (char *)s;
-	while (*hold)
+	hold = 0;
+	while (*s)
 	{
-		hold++;
-		len++;
+		if (*s == (char)c)
+			hold = (char *)s;
+		s++;
 	}
-	if (c == '\0')
-		return (hold);
-	hold--;
-	while (len)
-	{
-		if (*hold == (char)c)
-			return (hold);
-		hold--;
-		len--;
-	}
-	return (0);
+	if ((char)c == '\0')
+		return ((char *)s);
+	return (hold);
 }
 
 // #include <stdio.h>
@@ -61,4 +52,4 @@ char	*ft_strrchr(const char *s, int c)
 // 			}
 // 	}
 // 	return (0);
-// }
+//  }

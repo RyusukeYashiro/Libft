@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 00:43:29 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/28 20:53:27 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/05/01 15:22:34 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	count_len(char const **s, char c)
 	int	len;
 
 	len = 0;
-	while (**s != c)
+	while (**s != c && **s)
 	{
 		(*s)++;
 		len++;
@@ -81,6 +81,8 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	count_word = count_words(s, c);
 	hold = (char **)malloc(sizeof(char *) * (count_word + 1));
 	if (!hold)
@@ -101,13 +103,14 @@ char	**ft_split(char const *s, char c)
 	return (hold);
 }
 
+// #include <stdio.h>
 // int	main(void)
 // {
 // 	char	*str;
 // 	char	charSet;
 // 	char	**split_Result;
 
-// 	str = "AAbBBbCbddbe";
+// 	str = "aabc\0cbeeb";
 // 	charSet = 'b';
 // 	split_Result = ft_split(str, charSet);
 // 	if (split_Result)
