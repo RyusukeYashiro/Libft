@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:33:59 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/28 22:10:56 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/05/01 11:13:17 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_check(const char **string, int *sign)
 {
 	while (ft_isspace(**string))
 		(*string)++;
-	while (**string == '-' || **string == '+')
+	if (**string == '-' || **string == '+')
 	{
 		if (**string == '-')
 			*sign *= -1;

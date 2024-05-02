@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ita.c                                           :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 04:43:40 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/26 05:19:25 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/05/01 16:09:47 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ size_t	ft_num_len(long long num)
 
 char	*ft_itoa(int n)
 {
-	long long	num;
-	char		*hold;
-	size_t		len;
+	long	num;
+	char	*hold;
+	size_t	len;
 
 	num = n;
 	len = ft_num_len(num);

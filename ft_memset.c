@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 11:55:30 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/28 22:06:15 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/04/30 14:04:04 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	hold = (unsigned char *)b;
 	i = 0;
-	if (b == 0)
-		return (NULL);
 	while (i < len)
 	{
 		hold[i] = (unsigned char)c;

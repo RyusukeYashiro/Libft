@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 14:40:57 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/28 21:41:55 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/05/02 00:51:37 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,36 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*hold;
-	size_t	i;
-	size_t	actual_len;
+	char		*hold;
+	char const	*start_s;
+	size_t		s_len;
 
-	i = 0;
-	if (!s || start > ft_strlen(s))
+	if (!s)
 		return (0);
-	actual_len = ft_strlen(s + start);
-	if (actual_len > len)
-		actual_len = len;
-	hold = (char *)malloc(sizeof(char) * (actual_len + 1));
+	s_len = ft_strlen(s);
+	if (start >= s_len || len == 0)
+		return (ft_strdup(""));
+	if (len > s_len)
+		len = s_len;
+	hold = (char *)malloc(len + 1);
 	if (!hold)
-		return (0);
-	while (i < actual_len && s[start + i])
-	{
-		hold[i] = s[start + i];
-		i++;
-	}
-	hold[i] = '\0';
+		return (NULL);
+	start_s = &s[start];
+	ft_strlcpy(hold, start_s, len + 1);
 	return (hold);
 }
-/*
-int	main(void)
-{
-	char	src[] = "substr function Implementation";
-	int		st;
-	int		en;
-	char	*ft_test;
 
-	st = 7;
-	en = 9;
-	ft_test = ft_substr(src, st, en);
-	printf("%s\n", ft_test);
-	return (0);
-}
-*/
+// #include <stdio.h>
+// int	main(void)
+// {
+// 	char	src[] = "substr function Implementation";
+// 	int		st;
+// 	int		en;
+// 	char	*ft_test;
+
+// 	st = 7;
+// 	en = 9;
+// 	ft_test = ft_substr(src, st, en);
+// 	printf("%s\n", ft_test);
+// 	return (0);
+// }

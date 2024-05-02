@@ -6,7 +6,7 @@
 /*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 16:56:00 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/28 12:28:28 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/04/30 14:11:23 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	hold = (unsigned char *)dest;
 	s = (unsigned char *)src;
+	if (!hold && !s)
+		return (0);
 	i = 0;
 	while (i < n)
 	{
