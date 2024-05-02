@@ -6,7 +6,7 @@
 /*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:59:23 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/05/02 00:49:40 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/05/02 12:55:47 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
+	if (ft_strlen(s1) == 0)
+		return (ft_strdup(""));
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	while (s1[start] && ft_strchr(set, s1[start]))
@@ -32,20 +34,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(hold, &s1[start], end - start + 2);
 	return (hold);
 }
+/*
+#include <stdio.h>
 
-// #include <stdio.h>
+ int	main(void)
+ {
+	char	*test;
+	char	*st;
+	char	*ans;
 
-// int	main(void)
-// {
-// 	char	*test;
-// 	char	*st;
-// 	char	*ans;
-
-// 	test = "1234aaaa22331122";
-// 	st = "1234";
-// 	ans = ft_strtrim(test, st);
-// 	if (ans != NULL)
-// 	{
-// 		printf("%s", ans);
-// 	}
-// }
+	test = "";
+	st = "1234";
+	ans = ft_strtrim(test, st);
+	if (ans != NULL)
+	{
+		printf("%s", ans);
+	}
+ }
+*/
