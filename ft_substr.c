@@ -6,7 +6,7 @@
 /*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 14:40:57 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/30 17:12:50 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/05/02 00:51:37 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = s_len;
 	hold = (char *)malloc(len + 1);
 	if (!hold)
-		return (0);
+		return (NULL);
 	start_s = &s[start];
 	ft_strlcpy(hold, start_s, len + 1);
 	return (hold);

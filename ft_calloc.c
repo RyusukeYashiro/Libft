@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 12:50:27 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/28 21:41:21 by ryyashir         ###   ########.fr       */
+/*   Updated: 2024/05/01 16:05:40 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,29 +28,29 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_memset(str, 0, totalsize);
 	return (str);
 }
-/*
-int	main(void) {
-	int num = 10;
-	size_t size = sizeof(int);
-	int *array = (int*)calloc(num,size);
-	int *array2 = (int*)ft_calloc(num,size);
-	printf("calloc    : ");
-	for(int i = 0; i < num; i++)
-	{
-		printf("%d", array[i]);
-	}
-	printf("\n");
-	printf("ft_calloc : ");
+// #include<stdio.h>
+// #include<stdlib.h>
+// int	main(void) {
+// 	int num = 10;
+// 	size_t size = sizeof(int);
+// 	int *array = (int*)calloc(num,size);
+// 	int *array2 = (int*)ft_calloc(num,size);
+// 	printf("calloc    : ");
+// 	for(int i = 0; i < num; i++)
+// 	{
+// 		printf("%d", array[i]);
+// 	}
+// 	printf("\n");
+// 	printf("ft_calloc : ");
 
-	for(int i = 0; i < num; i++)
-	{
-		printf("%d" , array2[i]);
-	}
+// 	for(int i = 0; i < num; i++)
+// 	{
+// 		printf("%d" , array2[i]);
+// 	}
 
-	printf("\n");
+// 	printf("\n");
 
-	free(array);
-	free(array2);
-	return (0);
-}
-*/
+// 	free(array);
+// 	free(array2);
+// 	return (0);
+// }

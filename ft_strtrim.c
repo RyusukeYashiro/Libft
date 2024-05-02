@@ -6,7 +6,7 @@
 /*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:59:23 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/04/28 15:50:50 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/05/02 00:49:40 by ryusukeyash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	hold = (char *)malloc(sizeof(char) * (end - start + 2));
 	if (!hold)
-		return (0);
+		return (NULL);
 	ft_strlcpy(hold, &s1[start], end - start + 2);
 	return (hold);
 }
