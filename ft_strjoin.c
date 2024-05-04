@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
+/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:05:28 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/05/01 18:09:00 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/05/04 14:39:26 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_cat(char *hold, const char *string)
+static void	ft_cat(char *hold, const char *string)
 {
 	size_t	i;
 

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
+/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 04:43:40 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/05/01 16:09:47 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/05/04 14:38:43 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_num_len(long long num)
+static size_t	ft_num_len(long long num)
 {
 	size_t	len;
 

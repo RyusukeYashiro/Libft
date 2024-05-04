@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
+/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 00:43:29 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/05/01 15:22:34 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/05/04 14:39:09 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	count;
 	int	flag;
@@ -33,7 +33,7 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-int	count_len(char const **s, char c)
+static int	count_len(char const **s, char c)
 {
 	int	len;
 
@@ -46,7 +46,7 @@ int	count_len(char const **s, char c)
 	return (len);
 }
 
-void	ft_free(char **hold, int count)
+static void	ft_free(char **hold, int count)
 {
 	while (count > 0)
 	{
@@ -56,7 +56,7 @@ void	ft_free(char **hold, int count)
 	free(hold);
 }
 
-char	*ft_dup(const char *s, int len)
+static char	*ft_dup(const char *s, int len)
 {
 	int		i;
 	char	*word;

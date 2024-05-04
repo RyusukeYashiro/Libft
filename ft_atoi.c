@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryusukeyashiro <ryusukeyashiro@student.    +#+  +:+       +#+        */
+/*   By: ryyashir <ryyashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:33:59 by ryyashir          #+#    #+#             */
-/*   Updated: 2024/05/01 11:13:17 by ryusukeyash      ###   ########.fr       */
+/*   Updated: 2024/05/04 14:38:25 by ryyashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	return (c == ' ' || (c >= 9 && c <= 13));
 }
 
-void	ft_check(const char **string, int *sign)
+static void	ft_check(const char **string, int *sign)
 {
 	while (ft_isspace(**string))
 		(*string)++;
@@ -29,7 +29,7 @@ void	ft_check(const char **string, int *sign)
 	}
 }
 
-int	overflow_check(int sign, long tmp, long hold)
+static int	overflow_check(int sign, long tmp, long hold)
 {
 	long	mx;
 	long	mn;
